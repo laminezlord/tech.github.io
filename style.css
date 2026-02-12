@@ -1,0 +1,274 @@
+:root {
+  --primary: #f59e0b;
+  --dark: #0f172a;
+  --muted: #64748b;
+  --bg: #f8fafc;
+  --card: #ffffff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: system-ui, Arial, sans-serif;
+}
+
+body {
+  background: var(--bg);
+  color: var(--dark);
+  line-height: 1.6;
+}
+
+/* Topbar */
+.topbar {
+  background: #020617;
+  color: #e5e7eb;
+  padding: 8px 20px;
+  font-size: 13px;
+  text-align: center;
+}
+
+/* Header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 40px;
+  background: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: bold;
+}
+
+.brand img {
+  height: 40px;
+}
+
+.nav {
+  display: flex;
+  gap: 20px;
+}
+
+.nav a {
+  text-decoration: none;
+  color: #020617;
+  font-weight: 500;
+}
+
+.nav-cta {
+  background: var(--primary);
+  padding: 8px 14px;
+  border-radius: 6px;
+  color: #000;
+}
+
+.menu-btn {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/* Hero */
+.hero-pro {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 40px;
+  padding: 80px 40px;
+  align-items: center;
+  background: #020617;
+  color: #fff;
+}
+
+.hero-text h1 {
+  font-size: 42px;
+  line-height: 1.2;
+}
+
+.hero-text span {
+  color: var(--primary);
+}
+
+.hero-actions {
+  margin-top: 25px;
+  display: flex;
+  gap: 12px;
+}
+
+.primary-btn {
+  background: var(--primary);
+  border: none;
+  padding: 12px 20px;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.ghost-btn {
+  background: transparent;
+  color: #fff;
+  border: 1px solid #fff;
+  padding: 12px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.hero-image img {
+  width: 100%;
+  border-radius: 16px;
+}
+
+/* Sections */
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 80px 20px;
+}
+
+.container h2 {
+  font-size: 32px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.program-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.program-card {
+  background: var(--card);
+  padding: 25px;
+  border-radius: 14px;
+  border: 1px solid #e5e7eb;
+  transition: 0.3s;
+}
+
+.program-card:hover {
+  transform: translateY(-6px);
+  border-color: var(--primary);
+}
+
+.highlight {
+  background: #fff;
+}
+
+.two-col {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 40px;
+  align-items: center;
+}
+
+.why-list {
+  list-style: none;
+  margin-top: 15px;
+}
+
+.why-list li {
+  margin-bottom: 10px;
+}
+
+.stats-pro {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  text-align: center;
+}
+
+.stats-pro strong {
+  font-size: 36px;
+  color: var(--primary);
+}
+
+.split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: center;
+}
+
+.split img {
+  width: 100%;
+  border-radius: 16px;
+}
+
+.testimonials-pro {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 20px;
+}
+
+.quote-card {
+  background: #fff;
+  padding: 25px;
+  border-radius: 14px;
+  border-left: 4px solid var(--primary);
+}
+
+/* CTA */
+.cta-pro {
+  background: linear-gradient(135deg, #f59e0b, #ffb703);
+  text-align: center;
+  padding: 80px 20px;
+}
+
+/* Footer */
+.footer-pro {
+  background: #020617;
+  color: #cbd5f5;
+  padding: 60px 20px;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 30px;
+  max-width: 1100px;
+  margin: auto;
+}
+
+.footer-pro a {
+  display: block;
+  color: #cbd5f5;
+  text-decoration: none;
+  margin-bottom: 8px;
+}
+
+.footer-pro h4 {
+  color: var(--primary);
+  margin-bottom: 12px;
+  font-size: 18px;
+}
+
+.copyright {
+  text-align: center;
+  margin-top: 40px;
+  font-size: 13px;
+  color: #94a3b8;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .hero-pro,
+  .two-col,
+  .split {
+    grid-template-columns: 1fr;
+  }
+
+  .nav {
+    display: none;
+  }
+
+  .menu-btn {
+    display: block;
+  }
+}
